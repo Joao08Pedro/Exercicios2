@@ -1,13 +1,11 @@
 const prompt = require("prompt-sync")();
-const senha = (Math.floor(Math.random) * 10) + 1
-let r = +prompt("Chute um número de 0 a 20: ")
+const sCorreta = Math.floor(Math.random() * 21)
 
-while (r !== senha) {
-    console.log("Errou! Tente novamente: ");
-    break;
-    
-    if (r === senha){
-        console.log("Acertou!");
-        
-    }
+let senha = +prompt("Chute um número de 0 a 20: ")
+
+while (senha !== sCorreta) {
+    console.log("Errou! Tente novamente."); 
+    senha = +prompt("Chute um número de 0 a 20: ")
 }
+
+console.log("Acertou!!");
